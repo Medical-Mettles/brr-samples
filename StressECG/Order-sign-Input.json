@@ -1,0 +1,864 @@
+{
+  "hook": "order-sign",
+  "hookInstance": "d1577c69-dfbe-44ad-ba6d-3e05e953b2ea",
+  "fhirServer": "http://fhirdev.mettles.com",
+  "fhirAuthorization": {
+    "access_token": "uyrertyu",
+    "token_type": "Bearer",
+    "expires_in": 300,
+    "scope": "patient/Patient.read patient/Coverage.read patient/Encounter.read",
+    "subject": "cds-service"
+  },
+  "user": "Practitioner/practitioner-1",
+  "context": {
+    "patientId": 8,
+    "encounterId": 4,
+    "userId": "Practitioner/practitioner-1",
+    "draftOrders": {
+      "resourceType": "Bundle",
+      "entry": [
+        {
+          "resource": {
+            "id": "servicerequest-4",
+            "authoredOn": "2020-07-21",
+            "code": {
+              "coding": [
+                {
+                  "code": "93351",
+                  "display": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report; including performance of continuous electrocardiographic monitoring, with supervision by a physician or other qualified health care professional"
+                }
+              ],
+              "text": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report; including performance of continuous electrocardiographic monitoring, with supervision by a physician or other qualified health care professional"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "insurance": [
+              {
+                "reference": "Coverage/coverage-5"
+              }
+            ],
+            "intent": "order",
+            "performer": [
+              {
+                "reference": "Practitioner/practitioner-1"
+              }
+            ],
+            "priority": "routine",
+            "requester": {
+              "reference": "Organization/organization-1"
+            },
+            "status": "active",
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "resourceType": "ServiceRequest"
+          }
+        }
+      ]
+    },
+    "selections": [
+      "ServiceRequest/servicerequest-4"
+    ]
+  },
+  "prefetch": {
+    "serviceRequestBundle": {
+      "resourceType": "Bundle",
+      "type": "collection",
+      "entry": [
+        {
+          "resource": {
+            "id": "servicerequest-4",
+            "authoredOn": "2020-07-21",
+            "code": {
+              "coding": [
+                {
+                  "code": "93351",
+                  "display": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report; including performance of continuous electrocardiographic monitoring, with supervision by a physician or other qualified health care professional"
+                }
+              ],
+              "text": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report; including performance of continuous electrocardiographic monitoring, with supervision by a physician or other qualified health care professional"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "insurance": [
+              {
+                "reference": "Coverage/coverage-5"
+              }
+            ],
+            "intent": "order",
+            "performer": [
+              {
+                "reference": "Practitioner/practitioner-1"
+              }
+            ],
+            "priority": "routine",
+            "requester": {
+              "reference": "Organization/organization-1"
+            },
+            "status": "active",
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "resourceType": "ServiceRequest"
+          }
+        },
+        {
+          "resource": {
+            "id": "patient-8",
+            "active": true,
+            "address": [
+              {
+                "city": "Kansas City",
+                "country": "United States",
+                "line": [
+                  "483  Big Elm"
+                ],
+                "postalCode": "64105",
+                "state": "Missouri"
+              }
+            ],
+            "birthDate": "1969-05-20",
+            "gender": "male",
+            "generalPractitioner": [
+              {
+                "reference": "Practitioner/practitioner-1"
+              }
+            ],
+            "identifier": [
+              {
+                "system": "http://hl7.org/fhir/sid/us-medicare",
+                "type": {
+                  "text": "Subscriber Number"
+                },
+                "use": "official",
+                "value": "2398434481"
+              }
+            ],
+            "managingOrganization": {
+              "reference": "Organization/organization-1"
+            },
+            "maritalStatus": {
+              "coding": [
+                {
+                  "code": "U",
+                  "display": "unmarried",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                }
+              ],
+              "text": "unmarried"
+            },
+            "name": [
+              {
+                "family": "Terry",
+                "given": [
+                  "James"
+                ],
+                "use": "official"
+              }
+            ],
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "816-806-8889"
+              },
+              {
+                "system": "email",
+                "value": "james@email.com"
+              }
+            ],
+            "resourceType": "Patient"
+          }
+        },
+        {
+          "resource": {
+            "id": "coverage-5",
+            "beneficiary": {
+              "reference": "Patient/patient-8"
+            },
+            "payor": [
+              {
+                "reference": "Organization/organization-4"
+              }
+            ],
+            "period": {
+              "end": "2021-01-01T08:28:45",
+              "start": "2019-01-01T17:17:11"
+            },
+            "policyHolder": {
+              "reference": "Patient/patient-8"
+            },
+            "relationship": {
+              "coding": [
+                {
+                  "code": "self",
+                  "display": "Self",
+                  "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+                }
+              ],
+              "text": "Self"
+            },
+            "status": "active",
+            "subscriber": {
+              "reference": "Patient/patient-8"
+            },
+            "type": {
+              "coding": [
+                {
+                  "code": "12345",
+                  "display": "Primary"
+                }
+              ],
+              "text": "Primary"
+            },
+            "resourceType": "Coverage"
+          }
+        },
+        {
+          "resource": {
+            "id": "organization-4",
+            "active": true,
+            "address": [
+              {
+                "city": "San Jose",
+                "country": "United States",
+                "line": [
+                  "UHC street"
+                ],
+                "postalCode": "95129",
+                "state": "California"
+              }
+            ],
+            "identifier": [
+              {
+                "system": "http://identifiers.mettles.com/fhir/sid/us-insurer-id",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "NIIP",
+                      "display": "Payor ID",
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                    }
+                  ],
+                  "text": "Payor ID"
+                },
+                "use": "official",
+                "value": "18003"
+              },
+              {
+                "system": "http://identifiers.mettles.com/fhir/sid/us-insurer-code",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "NIIP",
+                      "display": "Payor Code",
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                    }
+                  ],
+                  "text": "Payor Code"
+                },
+                "use": "official",
+                "value": "111222889"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "type": {
+                  "text": "Insurer NPI"
+                },
+                "use": "official",
+                "value": "5698477634"
+              }
+            ],
+            "name": "United Health Care",
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "4354647483"
+              }
+            ],
+            "type": [
+              {
+                "coding": [
+                  {
+                    "code": "pay",
+                    "display": "Payer",
+                    "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+                  }
+                ],
+                "text": "Payer"
+              }
+            ],
+            "resourceType": "Organization"
+          }
+        },
+        {
+          "resource": {
+            "id": "encounter-4",
+            "class": {
+              "code": "PRENC",
+              "display": "",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "userSelected": false,
+              "version": ""
+            },
+            "diagnosis": [
+              {
+                "condition": {
+                  "reference": "Condition/condition-4"
+                },
+                "rank": 1
+              },
+              {
+                "condition": {
+                  "reference": "Condition/condition-5"
+                }
+              },
+              {
+                "condition": {
+                  "reference": "Condition/condition-6"
+                }
+              },
+              {
+                "condition": {
+                  "reference": "Condition/condition-7"
+                }
+              },
+              {
+                "condition": {
+                  "reference": "Condition/condition-8"
+                }
+              },
+              {
+                "condition": {
+                  "reference": "Condition/condition-9"
+                }
+              },
+              {
+                "condition": {
+                  "reference": "Condition/condition-10"
+                },
+                "rank": 2
+              }
+            ],
+            "participant": [
+              {
+                "individual": {
+                  "reference": "Practitioner/practitioner-1"
+                },
+                "type": [
+                  {
+                    "coding": [
+                      {
+                        "code": "PPRF",
+                        "display": "Primary Performer",
+                        "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                        "version": ""
+                      }
+                    ],
+                    "text": "Primary Performer"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "end": "2020-07-21T14:45:50",
+              "start": "2020-07-14T12:45:29"
+            },
+            "serviceProvider": {
+              "reference": "Organization/organization-1"
+            },
+            "status": "in-progress",
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "resourceType": "Encounter"
+          }
+        },
+        {
+          "resource": {
+            "id": "practitioner-1",
+            "active": true,
+            "address": [
+              {
+                "city": "Mountain View",
+                "country": "United States",
+                "line": [
+                  "2350 W EL CAMINO REAL 2ND FLOOR"
+                ],
+                "postalCode": "93124",
+                "state": "California"
+              }
+            ],
+            "birthDate": "1974-12-25",
+            "gender": "male",
+            "identifier": [
+              {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "NPI",
+                      "display": "National Provider ID",
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                    }
+                  ],
+                  "text": "National Provider ID"
+                },
+                "use": "official",
+                "value": "1033389622"
+              }
+            ],
+            "name": [
+              {
+                "family": "Kershner",
+                "given": [
+                  "Stuart"
+                ]
+              }
+            ],
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "9546143225"
+              }
+            ],
+            "resourceType": "Practitioner"
+          }
+        },
+        {
+          "resource": {
+            "resourceType": "Condition",
+            "id": "condition-2",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active"
+                }
+              ],
+              "text": "Active"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed",
+                  "display": "Confirmed"
+                }
+              ],
+              "text": "Confirmed"
+            },
+            "severity": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "24484000",
+                  "display": "24484000"
+                }
+              ],
+              "text": "24484000"
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "J47",
+                  "display": "Bronchiectasis"
+                }
+              ],
+              "text": "Bronchiectasis"
+            },
+            "subject": {
+              "reference": "Patient/patient-1"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-1"
+            },
+            "onsetDateTime": "2020-06-05T10:43:17",
+            "abatementDateTime": "2020-06-11T16:43:17",
+            "recordedDate": "2020-06-05T16:44:11"
+          }
+        },
+        {
+          "resource": {
+            "resourceType": "Condition",
+            "id": "condition-4",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active"
+                }
+              ],
+              "text": "Active"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed",
+                  "display": "Confirmed"
+                }
+              ],
+              "text": "Confirmed"
+            },
+            "severity": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "6736007",
+                  "display": "6736007"
+                }
+              ],
+              "text": "6736007"
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "I20.9",
+                  "display": "Angina pectoris, unspecified"
+                }
+              ],
+              "text": "Angina pectoris, unspecified"
+            },
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "onsetDateTime": "2020-07-07T12:56:33",
+            "recorder": {
+              "reference": "Practitioner/practitioner-1"
+            }
+          }
+        },
+        {
+          "resource": {
+            "resourceType": "Condition",
+            "id": "condition-5",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active"
+                }
+              ],
+              "text": "Active"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "unconfirmed",
+                  "display": "Unconfirmed"
+                }
+              ],
+              "text": "Unconfirmed"
+            },
+            "severity": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "255604002",
+                  "display": "255604002"
+                }
+              ],
+              "text": "255604002"
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "I25.9",
+                  "display": "Chronic ischemic heart disease, unspecified"
+                }
+              ],
+              "text": "Chronic ischemic heart disease, unspecified"
+            },
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "onsetDateTime": "2020-07-07T12:58:24"
+          }
+        },
+        {
+          "resource": {
+            "resourceType": "Condition",
+            "id": "condition-6",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active"
+                }
+              ],
+              "text": "Active"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "unconfirmed",
+                  "display": "Unconfirmed"
+                }
+              ],
+              "text": "Unconfirmed"
+            },
+            "severity": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "6736007",
+                  "display": "6736007"
+                }
+              ],
+              "text": "6736007"
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "R06.02",
+                  "display": "Shortness of breath"
+                }
+              ],
+              "text": "Shortness of breath"
+            },
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "onsetDateTime": "2020-07-10T12:59:29",
+            "asserter": {
+              "reference": "Patient/patient-8"
+            }
+          }
+        },
+        {
+          "resource": {
+            "resourceType": "Condition",
+            "id": "condition-7",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active"
+                }
+              ],
+              "text": "Active"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "unconfirmed",
+                  "display": "Unconfirmed"
+                }
+              ],
+              "text": "Unconfirmed"
+            },
+            "severity": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "6736007",
+                  "display": "6736007"
+                }
+              ],
+              "text": "6736007"
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "R07.9",
+                  "display": "Chest pain, unspecified"
+                }
+              ],
+              "text": "Chest pain, unspecified"
+            },
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "onsetDateTime": "2020-07-14T15:34:25"
+          }
+        },
+        {
+          "resource": {
+            "resourceType": "Condition",
+            "id": "condition-8",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active"
+                }
+              ],
+              "text": "Active"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "unconfirmed",
+                  "display": "Unconfirmed"
+                }
+              ],
+              "text": "Unconfirmed"
+            },
+            "severity": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "6736007",
+                  "display": "6736007"
+                }
+              ],
+              "text": "6736007"
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "R68.84",
+                  "display": "Jaw pain"
+                }
+              ],
+              "text": "Jaw pain"
+            },
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "onsetDateTime": "2020-07-07T15:35:12"
+          }
+        },
+        {
+          "resource": {
+            "resourceType": "Condition",
+            "id": "condition-9",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active"
+                }
+              ],
+              "text": "Active"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "unconfirmed",
+                  "display": "Unconfirmed"
+                }
+              ],
+              "text": "Unconfirmed"
+            },
+            "severity": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "24484000",
+                  "display": "24484000"
+                }
+              ],
+              "text": "24484000"
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "M79.603",
+                  "display": "Pain in arm, unspecified"
+                }
+              ],
+              "text": "Pain in arm, unspecified"
+            },
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "onsetDateTime": "2020-07-07T15:52:04"
+          }
+        },
+        {
+          "resource": {
+            "resourceType": "Condition",
+            "id": "condition-10",
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active"
+                }
+              ],
+              "text": "Active"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed",
+                  "display": "Confirmed"
+                }
+              ],
+              "text": "Confirmed"
+            },
+            "severity": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "6736007",
+                  "display": "6736007"
+                }
+              ],
+              "text": "6736007"
+            },
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "I27.20",
+                  "display": "Pulmonary hypertension, unspecified"
+                }
+              ],
+              "text": "Pulmonary hypertension, unspecified"
+            },
+            "subject": {
+              "reference": "Patient/patient-8"
+            },
+            "encounter": {
+              "reference": "Encounter/encounter-4"
+            },
+            "onsetDateTime": "2020-07-14T12:09:19"
+          }
+        }
+      ]
+    }
+  }
+}
