@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 This example demonstrates the applicability of the the following user guides in an simple use case.
 <ul>
 <li> Coverage Requirements discovery (CRD)</li>
