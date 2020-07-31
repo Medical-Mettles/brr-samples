@@ -18,11 +18,17 @@ The sections below describe various files available in this example.
 The file  [Order Sign Input](Order-sign-Input.json) gives an example of how an order sign CDS hook is invoked from the EHR workflow.
 It contacts the payer to check if prior authorization or additional documentation is necessary to perform a Stress Echo cardiogram with a CPT code of 93350.
 The payer system returns back a CARD with information about the prior authorization and also the information about the Questionnaire template to be filled in.
-
+The image below shows the ordering mechanism
+![Orders](orders.png)
 ## Questionnaire Information
 The file [Stress Echo Cardiogram questionnaire](StressEchoCardiography.json) gives the information about the questionnaire to be filled in when submitting the prior authorization request.
 This questionnaire will have reference to a library of CQL files that would help in prepopulating this questionnaire when being executed through a smart app or a native application
+The file [Correlation](Correlation.pdf) gives a mapping between the guidelines document, questionnaire, the prepopulation criteria and a possible decision criteria.
+The following picture shows how a prepopulated part of the Questionnaire looks.
+![Prepopulated Picture](prepopulated.png)
 
+The following picture shows how an unfilled part of Questionnaire looks.
+![Unfilled Picture](notpopulated.png)
 ## Library File
 
 The file [Library Stress Echo Cardiogram](Library-StressEchoCardiography.json) has references to CQL file to prepopulate and also the datarequirements to execute in case the CQL executor does not have access to EHR FHIR resources.
