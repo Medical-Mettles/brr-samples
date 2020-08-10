@@ -1,4 +1,4 @@
-#DTR Execution
+##DTR Execution
 
 There are multiple ways in which the CQL execution for DTR can be performed. Each way has its own advantages and disadvantages. The basic assumption that we have in DTR is the payer defines the content that needs to be collected as a part of the DTR process. This includes the response to the Questionnaire and the other FHIR resources to be collected from the EHR / Practice management systems. The FHIR Library resource is used to define various components for implementing Documents, Templates and Rules  implementation guide.
 
