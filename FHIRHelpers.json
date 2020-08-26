@@ -1,0 +1,20 @@
+{
+    "id":"FHIRHelpers",
+    "version": "4.0.0",
+    "name": "FHIRHelpers",
+    "status": "active",
+    "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/codesystem-library-type.html",
+            "code": "logic-library"
+          }
+        ]
+      },
+      "content": [
+        {
+            "cqlFile":"FHIRHelpers.cql",
+            "version":"4.0.0"
+        }
+    ] 
+}
