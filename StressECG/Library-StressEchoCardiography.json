@@ -18,7 +18,7 @@
     },
     {
       "type": "depends-on",
-      "resource": "Library/library-unitedhealthcare-stressechocommon"
+      "resource": "Library/StressEchoCommon"
     }
   ],
   "dataRequirement": [
